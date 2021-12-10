@@ -6,7 +6,8 @@ class LinkerdSmi < Formula
   desc "Linkerd SMI Utility"
   homepage "https://github.com/linkerd/linkerd-smi"
   version "0.1.0"
-  depends_on "linkerd"
+
+  depends_on formula: "linkerd"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/linkerd/linkerd-smi/releases/download/v0.1.0/linkerd-smi-0.1.0-darwin"
@@ -20,11 +21,4 @@ class LinkerdSmi < Formula
   def install
     bin.install "linkerd-smi"
   end
-
-  caveats <<~EOS
-     To install the Linkerd SMI extension run the following command:
-     linkerd smi install | kubectl apply -f -
-     To verify the installation run the following command:
-     linkerd smi check
-  EOS
 end
