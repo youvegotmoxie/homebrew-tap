@@ -15,6 +15,6 @@ class LinkerdSmi < Formula
   end
 
   def install
-    binary "linkerd-smi-#{version}-darwin", target: "linkerd-smi"
+    bin.install "linkerd-smi-0.1.0-darwin"
   end
 end
