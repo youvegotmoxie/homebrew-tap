@@ -21,7 +21,7 @@ class LinkerdSmi < Formula
     bin.install "linkerd-smi"
   end
 
-  caveats <<~EOS
+ caveats <<~EOS
     To install the Linkerd SMI extension run the following command:
 
     linkerd smi install | kubectl apply -f -
@@ -30,5 +30,5 @@ class LinkerdSmi < Formula
 
     linkerd smi check
 
-    EOS
+ EOS
 end
