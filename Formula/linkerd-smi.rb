@@ -7,7 +7,7 @@ class LinkerdSmi < Formula
   homepage "https://github.com/linkerd/linkerd-smi"
   version "0.1.0"
 
-  depends_on formula: "linkerd"
+  depends_on "linkerd" => :install
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/linkerd/linkerd-smi/releases/download/v0.1.0/linkerd-smi-0.1.0-darwin"
