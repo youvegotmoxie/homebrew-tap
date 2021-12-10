@@ -15,6 +15,6 @@ class LinkerdSmi < Formula
   end
 
   def install
-    bin.install "linkerd-smi-0.1.0-darwin"
+    bin.install "linkerd-smi-0.1.0-darwin" => "linkerd-smi"
   end
 end
