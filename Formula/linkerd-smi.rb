@@ -5,13 +5,13 @@
 class LinkerdSmi < Formula
   desc "Linkerd SMI Utility"
   homepage "https://github.com/linkerd/linkerd-smi"
-  version "0.1.0"
+  version "0.2.0"
 
   depends_on "linkerd"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/linkerd/linkerd-smi/releases/download/v0.1.0/linkerd-smi-0.1.0-darwin"
-    sha256 "9e5b300d25b5cedd544f8ade5da765cf4038cef05a033ddb9bcdbd555b9ed3d4"
+    url "https://github.com/linkerd/linkerd-smi/releases/download/v0.2.0/linkerd-smi-0.2.0-darwin"
+    sha256 "6b0a849547a1cde22fc35b371aa4ad55482edee1014fd9e9a3bf01a6cb4207c9"
   end
 
   def install

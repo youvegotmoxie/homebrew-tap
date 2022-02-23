@@ -5,11 +5,11 @@
 class K0sctl < Formula
   desc "k0s Management Tool"
   homepage "https://github.com/linkerd/linkerd-smi"
-  version "0.12.0-rc.3"
+  version "0.12.6"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/k0sproject/k0sctl/releases/download/v0.12.0-rc.3/k0sctl-darwin-x64"
-    sha256 "5bd901c07c78a6918db70fd68a46336bdf5111eebc176e23286ba4740639edeb"
+    url "https://github.com/k0sproject/k0sctl/releases/download/v0.12.6/k0sctl-darwin-x64"
+    sha256 "e3f9b58049a5c71b69034dab07cceb457cdf30ff7608fed5cbdf51b6660d917d"
   end
 
   def install

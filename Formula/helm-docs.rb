@@ -5,23 +5,11 @@
 class HelmDocs < Formula
   desc "Automatically generate markdown documentation for helm charts"
   homepage "https://github.com/norwoodj/helm-docs"
-  version "1.5.0"
+  version "1.7.0"
 
   if OS.mac?
-    url "https://github.com/norwoodj/helm-docs/releases/download/v1.5.0/helm-docs_1.5.0_Darwin_x86_64.tar.gz"
-    sha256 "728d35d3bbbd8a228efd71c287ae4d1d3215e7f7fa2180ec481d2b8e6fdc5e42"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/norwoodj/helm-docs/releases/download/v1.5.0/helm-docs_1.5.0_Linux_x86_64.tar.gz"
-    sha256 "a352e13a8438045b8ed138b821cb757c177acd999c1af77345152d7a64b0ddb7"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/norwoodj/helm-docs/releases/download/v1.5.0/helm-docs_1.5.0_Linux_armv6.tar.gz"
-    sha256 "0e689c3ff05364bab2337f35a60cbfd2caca6cfe2f8377896f215b0904b49e82"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/norwoodj/helm-docs/releases/download/v1.5.0/helm-docs_1.5.0_Linux_arm64.tar.gz"
-    sha256 "b3effcdebb2b8dcc80e2bbf8d90370e628e2d56b37f9d4ddf307ea33243b345c"
+    url "https://github.com/norwoodj/helm-docs/releases/download/v1.7.0/helm-docs_1.7.0_Darwin_x86_64.tar.gz"
+    sha256 "e34b4918ad92c6e553130029895aefc76a353f6ea7d968bbdf8037305dd22313"
   end
 
   def install
