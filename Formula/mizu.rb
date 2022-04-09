@@ -5,11 +5,11 @@
 class Mizu < Formula
   desc "Mizu traffic inspection utility"
   homepage "https://github.com/up9inc/mizu"
-  version "27.2"
+  version "30.4"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/up9inc/mizu/releases/download/27.2/mizu_darwin_amd64"
-    sha256 "73250b33d2e02cb7133e2724f75913278687d69615849d3793666d77eb437365"
+    url "https://github.com/up9inc/mizu/releases/download/30.4/mizu_darwin_amd64"
+    sha256 "2a2587083394772cc276895b54c6393a237f70cb6fe7105d88f6a78b72f1b528"
   end
 
   def install
