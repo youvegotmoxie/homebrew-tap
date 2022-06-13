@@ -7,7 +7,11 @@ cask "lorien" do
   desc "Lorien is an infinite canvas drawing/note-taking app that is focused on performance, small savefiles and simplicity"
   homepage "https://github.com/mbrlabs/Lorien"
 
-  depends_on macos: ">= :montery"
+  livecheck do
+    url :url
+  end
+
+  depends_on macos: ">= :mojave"
   auto_updates true
 
   app "Lorien.app"
