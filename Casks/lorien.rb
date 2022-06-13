@@ -1,4 +1,4 @@
-cask "Lorien" do
+cask "lorien" do
   version "v0.5.0"
   sha256 "4bbb21f48dc8910673d0c594b514edc02144de2dd17996363cbfdf2beec44cd7"
 
@@ -8,6 +8,7 @@ cask "Lorien" do
   homepage "https://github.com/mbrlabs/Lorien"
 
   depends_on macos: ">= :montery"
+  auto_updates true
 
   app "Lorien.app"
 
