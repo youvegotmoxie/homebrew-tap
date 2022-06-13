@@ -1,21 +1,15 @@
-cask "4k-stogram" do
-  version "4.3.2"
-  sha256 "67b26ce34150ca58bdffeed81c3917d42a7d33b2fd5994b73901190e19feff79"
+cask "Lorien" do
+  version "v0.5.0"
+  sha256 "4bbb21f48dc8910673d0c594b514edc02144de2dd17996363cbfdf2beec44cd7"
 
-  url "https://dl.4kdownload.com/app/4kstogram_#{version}.dmg"
-  name "4K Stogram"
-  desc "Download Instagram photos, accounts, hashtags and locations"
-  homepage "https://www.4kdownload.com/products/product-stogram"
+  url "https://github.com/mbrlabs/Lorien/releases/download/#{version}/Lorien_#{version}_macOS.dmg"
+  name "Lorien"
+  desc "Lorien is an infinite canvas drawing/note-taking app that is focused on performance, small savefiles and simplicity"
+  homepage "https://github.com/mbrlabs/Lorien"
 
-  livecheck do
-    url "https://www.4kdownload.com/downloads"
-    regex(%r{href=.*?/4kstogram[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  depends_on macos: ">= :montery"
 
-  auto_updates true
-  depends_on macos: ">= :high_sierra"
+  app "Lorien.app"
 
-  app "4K Stogram.app"
-
-  zap trash: "~/Pictures/4K Stogram"
+  zap trash: "/Applications/Lorien.app"
 end
