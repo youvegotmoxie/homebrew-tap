@@ -2,16 +2,16 @@
 class Hubble < Formula
   desc "Hubble observability tool for Cilium CNI"
   homepage "https://github.com/cilium/hubble"
-  version "0.9.0"
+  version "0.10.0"
 
   if OS.mac?
-    url "https://github.com/cilium/hubble/releases/download/v0.9.0/hubble-darwin-amd64.tar.gz"
-    sha256 "2cb4e437a80c40a4d03a33f71b7b5de4df122382e3ce05034d9113e4b5cad974"
+    url "https://github.com/cilium/hubble/releases/download/v0.10.0/hubble-darwin-amd64.tar.gz"
+    sha256 "5d1e76dce290d91ad451e97835117e460256bb4e960ee9a96997379d9ac5b7f7"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cilium/hubble/releases/download/v0.9.0/hubble-darwin-arm64.tar.gz"
-        sha256 "4d7bb949e5de5b5dacf9a56494bf795b97cc22374e9c01c355353fda6fb5c146"
+        url "https://github.com/cilium/hubble/releases/download/v0.10.0/hubble-darwin-arm64.tar.gz"
+        sha256 "df35e844d358128f5668e12093d79058a18eada682c11feaada0cd7eb55b75c6"
       else
       end
     end
