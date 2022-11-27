@@ -8,7 +8,7 @@ class K0sctl < Formula
   version "0.14.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/k0sproject/k0sctl/releases/download/v#version/k0sctl-darwin-x64"
+    url "https://github.com/k0sproject/k0sctl/releases/download/v#{version}/k0sctl-darwin-x64"
     sha256 "1360436c4188790d413150663181392b6a76eafbd46ed59bf61498843753eaef"
   end
 
