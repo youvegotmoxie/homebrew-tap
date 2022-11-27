@@ -5,11 +5,11 @@
 class K0sctl < Formula
   desc "k0s Management Tool"
   homepage "https://github.com/k0sproject/k0sctl"
-  version "0.12.6"
+  version "0.14.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/k0sproject/k0sctl/releases/download/v0.12.6/k0sctl-darwin-x64"
-    sha256 "e3f9b58049a5c71b69034dab07cceb457cdf30ff7608fed5cbdf51b6660d917d"
+    url "https://github.com/k0sproject/k0sctl/releases/download/v#version/k0sctl-darwin-x64"
+    sha256 "1360436c4188790d413150663181392b6a76eafbd46ed59bf61498843753eaef"
   end
 
   def install
