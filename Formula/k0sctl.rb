@@ -14,5 +14,13 @@ class K0sctl < Formula
 
   def install
     bin.install "k0sctl-darwin-x64" => "k0sctl"
+    output = Utils.popen_read("SHELL=bash #{bin}/k0sctl completion bash")
+    (bash_completion/"k0sctl").write output
+    output = Utils.popen_read("SHELL=zsh #{bin}/k0sctl completion zsh")
+    (zsh_completion/"k0sctl").write output
+    prefix.install_metafiles
+  end
+  test do
+    system "#{bin}/k0sctl", "version"
   end
 end
