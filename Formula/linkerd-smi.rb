@@ -10,7 +10,7 @@ class LinkerdSmi < Formula
   depends_on "linkerd"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/linkerd/linkerd-smi/releases/download/v0.2.0/linkerd-smi-0.2.0-darwin"
+    url "https://github.com/linkerd/linkerd-smi/releases/download/v#{version}/linkerd-smi-#{version}-darwin"
     sha256 "6b0a849547a1cde22fc35b371aa4ad55482edee1014fd9e9a3bf01a6cb4207c9"
   end
 

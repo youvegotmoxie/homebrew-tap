@@ -5,7 +5,7 @@ class TektoncdCli < Formula
   version "0.23.1"
 
   if OS.mac?
-    url "https://github.com/tektoncd/cli/releases/download/v0.23.1/tkn_0.23.1_Darwin_x86_64.tar.gz"
+    url "https://github.com/tektoncd/cli/releases/download/v#{version}/tkn_#{version}_Darwin_x86_64.tar.gz"
     sha256 "e66b80f385a73fc634b79a97ca7908666536974e2b855d9218ff53a78cc4a0ce"
   end
 

@@ -5,7 +5,7 @@ class Civo < Formula
   version "1.0.25"
 
   if OS.mac?
-    url "https://github.com/civo/cli/releases/download/v1.0.25/civo-1.0.25-darwin-amd64.tar.gz"
+    url "https://github.com/civo/cli/releases/download/v#{version}/civo-#{version}-darwin-amd64.tar.gz"
     sha256 "3c99a9c10ccf4854466601af578db7761139ee100faaaef156d45fc7e4950a9c"
   end
 

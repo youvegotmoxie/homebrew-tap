@@ -5,11 +5,11 @@
 class Talosctl < Formula
   desc "Talos Linux Utility"
   homepage "https://github.com/talos-systems/talos"
-  version "v1.0.5"
+  version "v1.2.7"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/siderolabs/talos/releases/download/v1.0.5/talosctl-darwin-amd64"
-    sha256 "dacc9316a4eea2f1677f0f546c4ee75210a7506adab0c8b0867a08f518049157"
+    url "https://github.com/siderolabs/talos/releases/download/#{version}/talosctl-darwin-amd64"
+    sha256 "aadf3da8867e1269b25465487a8d666d644399ba5da33646086c42f5b63af3c2"
   end
 
   def install

@@ -5,12 +5,12 @@ class Hubble < Formula
   version "0.10.0"
 
   if OS.mac?
-    url "https://github.com/cilium/hubble/releases/download/v0.10.0/hubble-darwin-amd64.tar.gz"
+    url "https://github.com/cilium/hubble/releases/download/v#{version}/hubble-darwin-amd64.tar.gz"
     sha256 "5d1e76dce290d91ad451e97835117e460256bb4e960ee9a96997379d9ac5b7f7"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cilium/hubble/releases/download/v0.10.0/hubble-darwin-arm64.tar.gz"
+        url "https://github.com/cilium/hubble/releases/download/v#{version}/hubble-darwin-arm64.tar.gz"
         sha256 "df35e844d358128f5668e12093d79058a18eada682c11feaada0cd7eb55b75c6"
       else
       end
