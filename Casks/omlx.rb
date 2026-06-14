@@ -13,7 +13,7 @@ cask "omlx" do
     url :url
   end
 
-  depends_on "macos: >= :sequioa"
+  depends_on macos: ">= :sequioa"
   auto_updates true
 
   app "oMLX.app"
