@@ -21,5 +21,6 @@ cask "omlx" do
   zap trash: [
     "/Applications/oMLX.app",
     "~/Library/Application Support/oMLX",
+    "~/Library/Preferences/app.omlx.plist",
   ]
 end
