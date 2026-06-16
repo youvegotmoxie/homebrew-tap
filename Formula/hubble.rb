@@ -1,7 +1,16 @@
+# typed: false
+# frozen_string_literal: true
+
 class Hubble < Formula
   desc "Observability tool for Cilium CNI"
   homepage "https://github.com/cilium/hubble"
   version "1.19.4"
+  license "Apache-2.0"
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   if OS.mac?
     if Hardware::CPU.intel?

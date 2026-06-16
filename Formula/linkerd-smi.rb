@@ -6,6 +6,12 @@ class LinkerdSmi < Formula
   desc "Utility for Linkerd SMI"
   homepage "https://github.com/linkerd/linkerd-smi"
   version "0.2.7"
+  license "Apache-2.0"
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   if OS.mac?
     if Hardware::CPU.intel?

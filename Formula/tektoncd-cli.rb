@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class TektoncdCli < Formula
   desc "Tekton CLI - The command-line interface for interacting with Tekton"
   homepage "https://github.com/tektoncd/cli"
@@ -27,6 +30,7 @@ class TektoncdCli < Formula
     bin.install "tkn"
     bin.install_symlink "tkn" => "kubectl-tkn"
     generate_completions_from_executable(bin/"tkn", "completion")
+    prefix.install_metafiles
   end
 
   test do

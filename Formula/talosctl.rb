@@ -6,14 +6,21 @@ class Talosctl < Formula
   desc "Talos Linux Utility"
   homepage "https://github.com/siderolabs/talos"
   version "1.13.4"
+  license "MPL-2.0"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-amd64"
-    sha256 "bdee0433a4ef7668cea884b80b536f018160b0f998429d7440388c62a76e2062"
+  livecheck do
+    url :stable
+    strategy :github_latest
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-arm64"
-    sha256 "2d86630f623486d247dac8eb0db1e2f9f581c4aebd201a193e4eaf7eb13392fa"
+
+  if OS.mac?
+    if Hardware::CPU.intel?
+      url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-amd64"
+      sha256 "bdee0433a4ef7668cea884b80b536f018160b0f998429d7440388c62a76e2062"
+    elsif Hardware::CPU.arm?
+      url "https://github.com/siderolabs/talos/releases/download/v#{version}/talosctl-darwin-arm64"
+      sha256 "2d86630f623486d247dac8eb0db1e2f9f581c4aebd201a193e4eaf7eb13392fa"
+    end
   end
 
   def install
@@ -22,5 +29,7 @@ class Talosctl < Formula
     elsif OS.mac? && Hardware::CPU.arm?
       bin.install "talosctl-darwin-arm64" => "talosctl"
     end
+
+    generate_completions_from_executable(bin/"talosctl", "completion")
   end
 end
